@@ -1,5 +1,5 @@
-PSDI OpenFF Workshop
-====================
+CCPBioSim OpenFF Workshop
+=========================
 
 [![build](https://github.com/jimboid/biosim-openff-workshop/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/jimboid/biosim-openff-workshop/actions/workflows/build.yml)
 
