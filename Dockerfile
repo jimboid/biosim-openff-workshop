@@ -1,5 +1,6 @@
-# Start with JupyterHub image.
-FROM ccpbiosim/jupyterbase:v3.0.0
+# Start with BioSim base image.
+ARG BASE_IMAGE=latest
+FROM harbor.stfc.ac.uk/biosimulation-cloud/biosim-jupyter-base:$BASE_IMAGE
 
 LABEL maintainer="James Gebbie-Rayet <james.gebbie@stfc.ac.uk>"
 
@@ -14,9 +15,6 @@ RUN mamba install -c conda-forge openff-toolkit-examples==0.14.3 openff-nagl==0.
 RUN git clone https://github.com/openforcefield/ccpbiosim-2023.git && \
     mv ccpbiosim-2023/* . && \
     rm -rf ccpbiosim-2023
-
-# Copy lab workspace
-#COPY --chown=1000:100 default-37a8.jupyterlab-workspace /home/jovyan/.jupyter/lab/workspaces/default-37a8.jupyterlab-workspace
 
 # UNCOMMENT THIS LINE FOR REMOTE DEPLOYMENT
 COPY jupyter_notebook_config.py /etc/jupyter/
