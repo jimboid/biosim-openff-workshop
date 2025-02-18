@@ -2,6 +2,7 @@ CCPBioSim OpenFF Workshop
 =========================
 
 [![build](https://github.com/jimboid/biosim-openff-workshop/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/jimboid/biosim-openff-workshop/actions/workflows/build.yml)
+[![pulls](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fipitio.github.io%2Fbackage%2Fjimboid%2Fbiosim-openff-workshop%2Fbiosim-openff-workshop.json&query=%24.downloads&logo=github&label=pulls&color=blue)](https://github.com/jimboid/biosim-openff-workshop)
 
 This container is derived from the CCPBioSim JupyterHub image. This container
 adds the necessary software packages and notebook content to form a deployable
