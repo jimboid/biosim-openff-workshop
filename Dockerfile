@@ -11,7 +11,8 @@ LABEL org.opencontainers.image.licenses=MIT
 USER $NB_USER
 WORKDIR $HOME
 
-RUN conda install -c conda-forge mamba 
+RUN conda install -c conda-forge mamba
+RUN mamba install conda install dglteam::dgl conda-forge/osx-arm64::ambertools
 RUN mamba install -c conda-forge openff-toolkit-examples==0.14.3 openff-nagl==0.3.1 openff-nagl-models==0.1 
 
 # Get workshop files and move them to jovyan directory.
