@@ -12,6 +12,7 @@ USER $NB_USER
 WORKDIR $HOME
 
 RUN conda install -c conda-forge mamba
+RUN pip install mdtraj
 RUN mamba install dglteam::dgl conda-forge/osx-arm64::ambertools
 #RUN mamba install -c conda-forge openff-toolkit-examples==0.14.3 openff-nagl==0.3.1 openff-nagl-models==0.1
 RUN mamba install -c conda-forge openff-toolkit-examples openff-nagl openff-nagl-models
