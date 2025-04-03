@@ -15,10 +15,10 @@ jobs:
     - name: Test notebooks
       shell: bash
       run: |
-        docker run -t ghcr.io/${{ github.repository }}:dev bash -c \
-          pip install pytest nbmake \
-          cd notebooks \
-          pytest --nbmake *.ipynb
+        docker run -t ghcr.io/${{ github.repository }}:dev bash -c "\
+          pip install pytest nbmake; \
+          cd notebooks; \
+          pytest --nbmake *.ipynb; "
 
     - name: Authenticate with GHCR
       id: ghcr-auth
