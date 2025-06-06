@@ -23,8 +23,8 @@ RUN mamba install -c conda-forge openff-toolkit-examples openff-nagl openff-nagl
 
 # Get workshop files and move them to jovyan directory.
 RUN git clone https://github.com/CCPBioSim/openff-workshop.git && \
-    mv ccpbiosim-2023/* . && \
-    rm -rf ccpbiosim-2023
+    mv openff-workshop/* . && \
+    rm -rf openff-workshop
 
 # UNCOMMENT THIS LINE FOR REMOTE DEPLOYMENT
 COPY jupyter_notebook_config.py /etc/jupyter/
